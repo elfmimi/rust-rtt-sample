@@ -1,0 +1,20 @@
+[package]
+authors = ["Ein Terakawa <applause@elfmimi.jp>"]
+name = "rust-rtt"
+edition = "2021"
+version = "0.1.0"
+
+[dependencies]
+cortex-m = "0.7.6"
+cortex-m-rt = "0.7.1"
+panic-halt = "0.2.0"
+panic-rtt-target = { version = "0.1.2", features = ["cortex-m"] }
+rtt-target = { version = "0.3.1", features = ["cortex-m"] }
+
+[[bin]]
+name = "rust-rtt"
+path = "main.rs"
+
+[profile.release]
+debug = 2
+# lto = true
