@@ -8,7 +8,8 @@ SECTIONS {
     .option_setting 0x00000400 : {
         LONG(0xFFFFFFFF); /* OFS0 */
         LONG(0xFFFFFFFF); /* OFS1 */
-    } > FLASH
+        . = 0x00000440;
+    } > FLASH = 0xFFFFFFFF
 }
 INSERT AFTER .vector_table
 
